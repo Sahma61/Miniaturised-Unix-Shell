@@ -1,9 +1,8 @@
 ﻿Here is the code to Myshell.
 To run Myshell:
-1. store run.c and shell.c in the same folder.
-2. Compile run.c using gcc on a linux terminal.
-3. Run the file run.c on a Linux Terminal.
-4. The list of command available can be viewed using 
+1. Open the shell folder in terminal
+2. Type "bash shell.sh" in terminal, and out pops the terminal.
+3. The list of command available can be viewed using 
 “man \” on Myshell.
 
 
