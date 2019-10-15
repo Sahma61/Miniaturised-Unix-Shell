@@ -21,10 +21,10 @@ start:
 	scanf("%s%s",ch,ch1);
 	if(strcmp(ch,"ls")==0)
 		f=1;
-	else if(strcmp(ch,"pwd")==0)
-		f=2;
 	else if(strcmp(ch,"mkdir")==0)
-                f=3;
+		f=2;
+	else if(strcmp(ch,"pwd")==0)
+        f=3;
 	else if(strcmp(ch,"exit")==0)
 		f=-1;
 	else if(strcmp(ch,"cd")==0)
@@ -64,19 +64,7 @@ switch(f)
 				exit(0);
 		}
 		case 2:
-                {
-				char ch[100];
-				if(!getcwd(ch,100))
-				{
-					perror("ERROR");
-					exit(EXIT_FAILURE);
-				}
-				else
-					printf("%s\n",ch);
-				exit(0);
-		}
-		case 3:
-                {
+            {
 				char cwd[100];
 				if(!getcwd(cwd,100))
 				{
@@ -91,6 +79,18 @@ switch(f)
 					exit(EXIT_FAILURE);
 				}
                         exit(0);
+		} 
+		case 3:
+            {
+				char ch[100];
+				if(!getcwd(ch,100))
+				{
+					perror("ERROR");
+					exit(EXIT_FAILURE);
+				}
+				else
+					printf("%s\n",ch);
+				exit(0);
 		}
 		case 4:
                 {
