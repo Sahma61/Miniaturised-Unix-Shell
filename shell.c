@@ -33,6 +33,8 @@ start:
 		f=5;
 	else if(strcmp(ch,"man")==0)
 		f=6;
+	else if(strcmp(ch,"grep")==0)
+		f=7;
 	else
 		f=0;
 	if(f==-1)
@@ -127,7 +129,31 @@ switch(f)
 				printf("4.mkdir\n");
 				printf("5.rmdir\n");
 				printf("6.man\n");
-				printf("7.exit\n");
+				printf("7.grep\n");
+				printf("8.exit\n");
+                                exit(0);
+		}
+		case 7:
+		{
+			int k=0;
+                                DIR *p;
+                                struct dirent *d1;
+                                char ch[100];
+                                getcwd(ch,100);
+                                p= opendir(ch);
+                                if(p==NULL)
+                                {
+                                        perror("can not find directory");
+                                        exit(-1);
+                                }
+                                while(d1=readdir(p))
+                                        if(strcmp(ch1,d1->d_name)==0)
+					{
+						printf("%s",d1->d_name);
+						k=1;
+					}
+				if(k==0)
+					printf("file not found.\n");
                                 exit(0);
 		}
 	default:
