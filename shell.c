@@ -16,7 +16,6 @@ start:
 	printf("1. The list of available commands can be viewed by typing \"man \\ \" \n");
 	printf("2. Any command which doesn't require an input should be provided an input \"\\\" \n");
 	printf("For e.g. : ls should be written as \"ls \\ \" \n");
-	printf("Author: OS Group 3\n");
 	printf("myshell>");
 	scanf("%s%s",ch,ch1);
 	if(strcmp(ch,"ls")==0)
